@@ -171,3 +171,99 @@
 .text-content {
     margin: 25px 0;
 }
+
+.contacts__icon-pic {
+    width: 19px;
+    height: 100%;
+    fill: #00bea4;
+}
+
+.menu__item {
+    display: inline-block;
+    margin: 20px 17px;  
+}
+
+.menu__link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+}
+
+.socials__item-round {
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.footer {
+    background-color: #3d5556;
+    opacity: 0.85;
+    margin-top: -137px;
+}
+
+.footer__text {
+    color: #fff;
+    font-weight: 300;
+    padding: 15px;
+}
+
+.footer__row {
+    width: 100%;
+    display: flex;
+}
+
+.footer__col {
+    width: 50%;
+}
+
+.footer__col_justify_end {
+    font-size: 16px;
+    font-weight: 300;
+    color: #fff;
+    text-align: end;
+    padding: 15px;
+}
+
+.map {
+    height: 670px;
+    background-image: url('./assets/images/map-pseudo.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.wrapper:after {
+    content: "";
+    height: 137px;
+    width: 100%;
+    display: block;
+}
+
+.contacts {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 380px;
+    height: 290px;
+    border-radius: 7px;
+    background-color: #fcfcfc;
+    opacity: 0.8;
+    text-align: center;
+    &__title {
+        font-style: normal;
+    }
+    &__icon {
+        margin: 0 15px;
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        height: 40px;
+    }
+}
+
+.block-subtitle__contacts {
+    margin: 20px 0;
+    font-size: 35px;
+}
