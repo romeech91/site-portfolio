@@ -1,0 +1,55 @@
+.skill {
+    display: block;
+    position: relative;
+    width: 110px;
+    height: 110px;
+    margin: 18px;
+}
+
+.skill__figure {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.skill__circle {
+    fill: transparent;
+    stroke: #ccc;
+    stroke-width: 15px;
+}
+
+.skill__circle_above {
+    stroke: $green;
+    stroke-dasharray: 251;
+    stroke-dashoffset: 142;
+}
+
+.skill-list {
+    &__item {
+        display: inline-block;
+    }
+}
+
+.skill-row__list {
+    display: -webkit-box;
+    position: relative;
+}
+
+.skill-row__item {
+    display: flex;
+    justify-content: center;
+}
+
+.skill__title {
+    position: absolute;
+    top: 41%;
+}
+
+.skills-row__title {
+    margin-left: 18px;
+    font-size: 28px;
+    font-weight: 500;
+}
