@@ -11,13 +11,13 @@ html(lang="ru")
     title Portfolio | #{title}
     link(rel='stylesheet' href='main.min.css')
     link(rel='stylesheet' href='assets/fonts/stylesheet.css')
+    link(rel='shortcut icon' href='https://cdn4.iconfinder.com/data/icons/general-office/91/General_Office_23-512.png')
   body
     .wrapper
       .maincontent
         block content
 
-      include ./common/footer.pug
-
+      include common/footer.pug
     script(src='bootloader.bundle.js')
     script(src='vendor.bundle.js')
     block scripts

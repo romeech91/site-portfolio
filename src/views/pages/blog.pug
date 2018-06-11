@@ -1,0 +1,77 @@
+extends ../main.layout.pug
+
+block variables
+  - var title = 'Блог'
+
+block content
+  section.hero.hero-blog
+    -
+      var socials = [
+        ['vk', 'http://vk.com'],
+        ['github', 'http://github.com'],
+        ['in', 'http://in.com']
+      ]
+
+    ul.socials.hero__links
+      each item in socials
+        li.socials__item
+          a(href=`${item[1]}`).socials__link
+            +icon(item[0], 'socials__link-icon')
+    .hero__menu
+      +icon('hamburger', 'hambg-menu')
+    block hero-title
+    .hero__title
+      +icon('blog_header', 'section-title__pic')
+    .hero__user.user
+      .user__pic
+      .user__description.desc-blog
+        block desc-change
+          .user__name.user__blog Блог
+          .user__info Статьи, которые я написал
+    .down-btn
+      +icon('arrow_down', 'hero__down-btn')
+  section.blog
+    aside.blog__sidebar
+      nav.blog__nav
+        ul.blog__list
+          li.blog__item
+            span.blog__link Самое важное в SASS
+          li.blog__item.blog__item--active
+            span.blog__link Приёмы в вёрстке, без которых не обходится не один сайт
+          li.blog__item
+            span.blog__link Самый необходимый набор Gulp плагинов
+          li.blog__item
+            span.blog__link Почему я выбрал Pug
+    main.blog__container
+      ul.blog__list-text
+        li.blog__text
+          h2.blog__text-title Самое важное в SASS
+          p.blog__text-date 11 ноября 2017
+          p.blog__text-contain Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия. <br> <br> Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
+          table.table
+            tr.table-row
+              td.table-1cell-width 
+              td.table-2cell-width
+            tr.table-row
+              td.table-1cell-width 1
+              td.table-2cell-width //присвоить
+            tr.table-row
+              td.table-1cell-width 2
+              td.table-2cell-width <b>$</b>(<b>document</b>).<b>data</b>(<i>'prop',</i> { <b>anything:</b> <i>'любой объект'</i>})
+            tr.table-row
+              td.table-1cell-width 3
+              td.table-2cell-width
+            tr.table-row
+              td.table-1cell-width 4
+              td.table-2cell-width //прочитать
+            tr.table-row
+              td.table-1cell-width 5
+              td.table-2cell-width <b>alert</b>( <b>$</b>(<b>document</b>).<b>data</b>(<i>'prop'</i>).<b>anything</b>) //любой объект
+            tr.table-row
+              td.table-1cell-width
+              td.table-2cell-width
+        li.blog__text
+          h2.blog__text-title Самое важное в SASS
+          p.blog__text-date 11 ноября 2017
+          p.blog__text-contain Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam est quis corporis, nemo quas a. Illum minus, saepe blanditiis eum dolores distinctio earum odit, magnam eligendi quam modi provident fugiat.Quae corporis rerum asperiores dolorem ipsa cum ex aut, fuga dicta eos voluptatibus iusto sequi vitae velit molestias nemo perferendis voluptatum accusantium repudiandae porro. Excepturi voluptatibus eligendi deserunt ratione praesentium?Maiores voluptates ipsa quas deserunt velit debitis temporibus. Praesentium, fugiat nisi ex, excepturi, molestias vero reprehenderit minima harum quisquam tempore assumenda id sint fugit et nemo quas vitae cumque explicabo.Consectetur quisquam repudiandae voluptatem aperiam, vel quidem necessitatibus consequuntur eius dolorum ut modi ea quas enim, laborum optio. Aut ut non dolorum amet odit magnam deleniti veniam quasi atque quia.
+        

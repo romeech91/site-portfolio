@@ -1,1 +1,103 @@
 
+.user__blog {
+    font-family: "BERNIER", sans-serif;
+    font-size: 63px;
+    font-weight: 400;
+
+}
+
+.hero-blog {
+    margin-bottom: 60px;
+}
+
+.blog {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    &__sidebar {
+        width: 30%;
+        padding-top: 10px;
+    }
+    &__container {
+        width: 60%;
+    }
+}
+
+.blog__list {
+    text-align: right;
+}
+
+
+.blog__item {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    &--active {
+        border-right: 3px solid #00bfa5;
+        color: #00bfa5;
+    }
+}
+
+.blog__text {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid gray;
+    width: 90%;
+    &:last-child {
+        border: none;
+    }
+    &-title {
+        font-family: "BERNIER", sans-serif;
+        font-size: 35px;
+    }
+    &-date {
+        font-size: 11px;
+        margin: 10px 0;
+    }
+    &-contain {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+}
+
+.hero-blog {
+    height: 400px;
+}
+
+.desc-blog {
+    top: 64%;
+}
+
+.table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    font-family: monospace;
+    margin-bottom: 20px;
+    &-row {
+        background-color: #f5f2f0;
+    }
+}
+
+.table-1cell-width {
+    width: 15px;
+    height: 23px;
+    background-color: #e7e5e3;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.table-2cell-width {
+    width: 200px;
+}
+
+b {
+    color: black;
+    font-weight: 600;
+}
+
+i {
+    color: #84ac32;
+    font-style: normal;
+}
