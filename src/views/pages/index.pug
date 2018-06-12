@@ -1,14 +1,23 @@
 extends ../auth.layout.pug
 
 block content
-  .auth-block
-    .auth-block__content
-      .auth-block__user
-        .user.user_color_grey
-          .user__pic
-            img.user__pic-img
-          .user__description
+  section.hero.hero-welcome
+      -
+        var socials = [
+          ['vk', 'http://vk.com'],
+          ['github', 'http://github.com'],
+          ['in', 'http://in.com']
+        ]
+
+      ul.socials.hero__links.social__link-welcome
+        each item in socials
+          li.socials__item
+            a(href=`${item[1]}`).socials__link
+              +icon(item[0], 'socials__link-icon')
+
+      .hero__user.user
+        .user__pic
+        .user__description
+          block desc-change
             .user__name Роман Казаков
             .user__info Личный сайт разработчика
-      .auth-block__socials
-        +socials(['vk', 'fb', 'in'], 'socials_fill_green')
