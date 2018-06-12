@@ -11,13 +11,20 @@ block content
 
       ul.socials.hero__links.social__link-welcome
         each item in socials
-          li.socials__item
+          li.socials__item.socials__item-welcome
             a(href=`${item[1]}`).socials__link
               +icon(item[0], 'socials__link-icon')
-
+      a(href='#').auth__btn Авторизоваться
+      .hero__bg-block
+        .link__buttons
+          a(href="works.html").link__button Мои работы
+          a(href="about.html").link__button Обо мне
+          a(href="blog.html").link__button Блог
       .hero__user.user
         .user__pic
-        .user__description
+        .user__description.user__description-welcome
           block desc-change
             .user__name Роман Казаков
             .user__info Личный сайт разработчика
+      .copyright-welcome
+        p © Роман Казаков | создано с любовью в LoftSchool | 2018
