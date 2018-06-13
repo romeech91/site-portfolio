@@ -128,11 +128,77 @@ h1 {
 .about-me__title {
     margin: 0;
     height: 185px;
-    background-color: #faf8f0;
+    background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    &-inner {
-        
+}
+
+.about-me__feedback {
+    height: 955px;
+    width: 100%;
+    background-image: url('./assets/images/works-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.form {
+    background-color: #a69e9688;
+    width: 380px;
+    height: 437px;
+    border-radius: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.subtitle-form {
+    font-size: 35px;
+    margin: 0;
+    color: #455a64;
+    padding-top: 30px;
+}
+
+.form__inputs {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+}
+
+.form__input {
+    border-radius: 6px;
+    padding: 5px 10px;
+    margin: 8px 0;
+}
+
+.form__textarea {
+    resize: none;
+    border-radius: 6px;
+    padding: 5px 10px;
+}
+
+.form__buttons {
+    width: 100%;
+}
+
+.form__btn {
+    padding: 10px 30px;
+    width: 50%;
+    color: #fff;
+    opacity: 0.8;
+    background-color: #268c8b;
+    transition: .3s ease;
+    &:hover {
+        background-color: #26bbaa;
+    }
+    &:first-child {
+        border-right: 2px solid #82b7b9;
+        border-radius: 0 0 0 6px;
+    }
+    &:last-child {
+        border-radius: 0 0 6px 0;
     }
 }

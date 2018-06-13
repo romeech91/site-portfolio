@@ -26,3 +26,13 @@ block content
     section.about-me
         .about-me__title
             .about-me__title-inner.block-title Что обо мне говорят
+        .about-me__feedback
+            form.form
+                .block-subtitle.subtitle-form Cвязаться со мной
+                .form__inputs
+                    input.form__input(type="text", placeholder='Имя')
+                    input.form__input(type="text", placeholder='Email')
+                    textarea(name="", cols="10", rows="8", type="text", placeholder='Ваше сообщение').form__textarea
+                .form__buttons
+                    button(type="submit").form__btn-submit.form__btn Отправить
+                    button(type="reset").form__btn-clear.form__btn Очистить
