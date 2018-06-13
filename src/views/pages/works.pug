@@ -14,5 +14,15 @@ block content
             .block-subtitle.works__site-name Сайт магазина бургеров
             .works__site-desc Html, Css, Javascript
             a.works__site-link(href="#") Посмотреть сайт
+                +icon('link', 'works__site-link_pic')
         .my-works__right
-            p Pictures burgers
+            .widget
+                .widget__main-preview
+                .widget__btns-preview
+                    .widget__btn-down
+                        +icon('portf_arrow_down', 'widget__btn-down_pic')
+                    .widget__btn-up
+                        +icon('portf_arrow_up', 'widget__btn-up_pic')
+    section.about-me
+        .about-me__title
+            .about-me__title-inner.block-title Что обо мне говорят
