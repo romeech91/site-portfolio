@@ -3,6 +3,7 @@
     top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 100;
 }
 
 
@@ -18,8 +19,12 @@
 }
 
 .socials__item-welcome {
-    fill: #fcfcfc;
+    fill: gray;
     opacity: 1;
+    transition: .3s;
+    &:hover {
+        fill: #fcfcfc;
+    }
 }
 
 .hero__bg-block {
@@ -43,19 +48,38 @@
 
 .link__buttons {
     display: flex;
-    width: 100%;
     background-color: #00bfa5;
     border-radius: 0 0 8px 8px;
+    width: 100%;
+    height: 50px;
 }
 
 .link__button {
-    padding: 12px 30px;
-    cursor: pointer;
+    padding-top: 10px;
     color: #fff;
     font-weight: 500;
     border-right: 1px solid;
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    transition: .3s;
     &:last-child {
         border: none;
+        &:hover {
+            background-color: #036d5f;
+            border-radius: 0 0 8px 0px;
+        }
+    }
+    &:hover {
+        background-color: #036d5f;
+    }
+    &:first-child {
+        border-right: 1px solid #fff;
+        &:hover {
+            background-color: #036d5f;
+            border-radius: 0 0 0px 8px;
+        }
     }
 }
 
@@ -74,6 +98,11 @@
     position: absolute;
     right: 2%;
     top: 2%;
+    transition: .4s;
+    &:hover {
+        background-color: #fff;
+        color: #00bfa5;
+    }
 }
 
 .copyright-welcome {

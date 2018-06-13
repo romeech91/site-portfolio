@@ -3,33 +3,16 @@ extends ../main.layout.pug
 block variables
     - var title = 'Мои работы'
 
-
 block content
-    .hero__bg-beige
-    .hero__bg-darker
-    section.hero
-        -
-            var socials = [
-                ['vk', 'http://vk.com'],
-                ['github', 'http://github.com'],
-                ['in', 'http://in.com']
-            ]
-
-        ul.socials.hero__links
-            each item in socials
-                li.socials__item
-                    a(href=`${item[1]}`).socials__link
-                        +icon(item[0], 'socials__link-icon')
-        .hero__menu
-            +icon('hamburger', 'hambg-menu')
-        block hero-title
-        .hero__title
-            +icon('portfolio_header', 'section-title__pic')
-        .hero__user.user
-            .user__pic
-            .user__description
-                block desc-change
-                    .user__name Роман Казаков
-                    .user__info Личный сайт разработчика
-        .down-btn
-            +icon('arrow_down', 'hero__down-btn')
+    .hero__bg-beige.hero__bg-full
+    include ../common/hero-sec.pug
+    +hero-header('hero-works', 'Казаков Роман', 'Личный сайт разработчика')
+    .works__block-title
+        .block-title.block-title_works Мои работы
+    section.my-works
+        .my-works__left
+            .block-subtitle.works__site-name Сайт магазина бургеров
+            .works__site-desc Html, Css, Javascript
+            a.works__site-link(href="#") Посмотреть сайт
+        .my-works__right
+            p Pictures burgers
