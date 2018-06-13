@@ -1,3 +1,60 @@
 h1 {
     background-color: transparent;
 }
+
+.hero-works {
+    background: url('./assets/images/welcome_bg.jpg');
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 600px;
+    -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%);
+    clip-path: polygon(0% 0%, 100% 0, 100% 85%, 50% 100%, 0 85%);
+    &__links {
+        display: flex;
+        position: absolute;
+        top: 2%;
+        left: 3%;
+    }
+}
+
+.hero__bg-full {
+    width: 100%;
+    left: 0;
+    background-color: #faf8f0;
+}
+
+.works__block-title {
+    height: 185px;
+    background-color: #faf8f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block-title_works {
+    margin: 0;
+    color: #373e42;
+}
+
+.my-works {
+    width: 100%;
+    display: flex;
+    &__left {
+        background-color: #f0efe9;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__right {
+        width: 50%;
+        background-color: #efebe0;
+    }
+}
+
+.works__site-name {
+    margin: 0;
+    font-size: 35px;
+}

@@ -114,6 +114,7 @@
 }
 
 .about {
+    position: relative;
     width: 100%;
     display: flex;
 
@@ -153,6 +154,13 @@
     font-family: 'BERNIER', sans-serif;
     margin: 15px 0;
 }
+
+/* .block-title__about {
+    fill: #e6e5e1;
+    position: absolute;
+    left: 3%;
+    top: 10%;
+} */
 
 .block-subtitle {
     text-transform: uppercase;

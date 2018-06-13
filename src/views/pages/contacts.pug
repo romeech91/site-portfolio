@@ -1,0 +1,8 @@
+extends ../main.layout.pug
+
+block variables
+    - var title = 'Мои работы'
+
+block content
+    include ../common/hero.pug
+    +hero-header('ROMAN ROMANOV', 'site of my sites')
