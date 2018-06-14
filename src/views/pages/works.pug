@@ -12,7 +12,8 @@ block content
     section.my-works
         .my-works__left
             .block-subtitle.works__site-name Сайт магазина бургеров
-            .works__site-desc Html, Css, Javascript
+            .works__site-desc
+                .works__site-desc_inner Html, Css, Javascript
             a.works__site-link(href="#") Посмотреть сайт
                 +icon('link', 'works__site-link_pic')
         .my-works__right
@@ -27,6 +28,22 @@ block content
         .about-me__title
             .about-me__title-inner.block-title Что обо мне говорят
         .about-me__feedback
+            .comments
+                .comments__block.comments__block-left
+                    .comments__block-quote
+                    .comments__block-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4 месяца только самых тяжелых испытаний и бессонных ночей!
+                    .comments__block-person
+                        +image('person1.png', 'фотография', 'comments__block-person_img')
+                        .names-side
+                            .comments__block-person_name Ковальчук Дмитрий
+                            .comments__block-person_position основатель Loftschool
+                .comments__block.comments__block-right
+                    .comments__block-text Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+                    .comments__block-person
+                        +image('person2.png', 'фотография', 'comments__block-person_img')
+                        .names-side
+                            .comments__block-person_name Сабанцев Владимир
+                            .comments__block-person_position преподаватель
             form.form
                 .block-subtitle.subtitle-form Cвязаться со мной
                 .form__inputs

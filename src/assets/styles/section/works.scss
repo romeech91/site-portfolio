@@ -61,7 +61,10 @@ h1 {
     border-top: 2px solid gray;
     border-bottom: 2px solid gray;
     margin-bottom: 30px;
+    width: 60%;
+    text-align: center;
 }
+
 .works__site-name {
     margin: 0;
     font-size: 35px;
@@ -70,9 +73,10 @@ h1 {
 
 .works__site-link {
     color: #fff;
-    background-color: darkgray;
+    background-color: #00bfa5;
     padding: 10px 15px;
     border-radius: 6px;
+    transition: .3s ease;
     &_pic {
         fill: #fff;
         width: 18px;
@@ -81,6 +85,12 @@ h1 {
         margin-right: 5px;
     }
 }
+
+.works__site-link:hover  {
+    background-color: rgb(104, 102, 102);
+    color: #fff;
+}
+
 
 .widget {
     width: 100%;
@@ -140,8 +150,44 @@ h1 {
     background-image: url('./assets/images/works-bg.png');
     background-repeat: no-repeat;
     background-size: cover;
+    justify-content: space-around;
+    align-items: center;
     display: flex;
+    flex-direction: column;
+}
+
+.comments {
+    display: flex;
+    align-items: center;
     justify-content: center;
+}
+
+.comments__block-person {
+    display: flex;
+    align-items: center;
+    color: #20b5a1;
+    &_img {
+        margin-right: 15px;
+    }
+    &_name {
+        font-weight: 700;
+    }
+    &_position {
+        font-weight: 400;
+    }
+}
+
+.comments__block {
+    width: 28%;
+    margin: 20px;
+    &-text {
+        margin-bottom: 15px;
+    }
+}
+
+.comments__block-quote {
+    font-size: 36px;
+    font-family: "Awesome", sans-serif;
 }
 
 .form {
@@ -188,11 +234,12 @@ h1 {
     padding: 10px 30px;
     width: 50%;
     color: #fff;
+    font-weight: 500;
     opacity: 0.8;
-    background-color: #268c8b;
+    background-color: #31b4b2;
     transition: .3s ease;
     &:hover {
-        background-color: #26bbaa;
+        background-color: #33d6c3;
     }
     &:first-child {
         border-right: 2px solid #82b7b9;
