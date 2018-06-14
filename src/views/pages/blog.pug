@@ -4,32 +4,8 @@ block variables
   - var title = 'Блог'
 
 block content
-  section.hero.hero-blog
-    -
-      var socials = [
-        ['vk', 'http://vk.com'],
-        ['github', 'http://github.com'],
-        ['in', 'http://in.com']
-      ]
-
-    ul.socials.hero__links
-      each item in socials
-        li.socials__item
-          a(href=`${item[1]}`).socials__link
-            +icon(item[0], 'socials__link-icon')
-    .hero__menu
-      +icon('hamburger', 'hambg-menu')
-    block hero-title
-    .hero__title
-      +icon('blog_header', 'section-title__pic')
-    .hero__user.user
-      .user__pic
-      .user__description.desc-blog
-        block desc-change
-          .user__name.user__blog Блог
-          .user__info Статьи, которые я написал
-    .down-btn
-      +icon('arrow_down', 'hero__down-btn')
+  include ../common/hero-sec.pug
+  +hero-header('hero-blog', 'Блог', 'Статьи, которые я написал', 'blog_header', 'blog__desc', 'user__blog')
   section.blog
     aside.blog__sidebar
       nav.blog__nav

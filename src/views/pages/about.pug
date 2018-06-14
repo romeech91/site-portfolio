@@ -8,32 +8,8 @@ block scripts
 block content
   .hero__bg-beige
   .hero__bg-darker
-  section.hero
-    -
-      var socials = [
-        ['vk', 'http://vk.com'],
-        ['github', 'http://github.com'],
-        ['in', 'http://in.com']
-      ]
-
-    ul.socials.hero__links
-      each item in socials
-        li.socials__item
-          a(href=`${item[1]}`).socials__link
-            +icon(item[0], 'socials__link-icon')
-    .hero__menu
-      +icon('hamburger', 'hambg-menu')
-    block hero-title
-    .hero__title
-      +icon('portfolio_header', 'section-title__pic')
-    .hero__user.user
-      .user__pic
-      .user__description
-        block desc-change
-          .user__name Роман Казаков
-          .user__info Личный сайт разработчика
-    .down-btn
-      +icon('arrow_down', 'hero__down-btn')
+  include ../common/hero-sec.pug
+  +hero-header('hero', 'Казаков Роман', 'Личный сайт разработчика', 'portfolio_header')
   section.about
     .about__left
 
