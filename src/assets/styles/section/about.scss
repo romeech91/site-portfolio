@@ -153,6 +153,20 @@
     font-size: 63px;
     font-family: 'BERNIER', sans-serif;
     margin: 15px 0;
+    &::after {
+        content: "-";
+        display: inline-block;
+        font-size: 63px;
+        margin-left: 5px;
+        opacity: .6;
+    }
+    &::before {
+        content: "-";
+        display: inline-block;
+        font-size: 63px;
+        margin-right: 5px;
+        opacity: .6;
+    }
 }
 
 /* .block-title__about {
@@ -165,6 +179,21 @@
 .block-subtitle {
     text-transform: uppercase;
     font-family: 'BERNIER', sans-serif;
+    &::after {
+        content: "-";
+        display: inline-block;
+        font-size: 35px;
+        margin-left: 10px;
+        opacity: .6;
+    }
+
+    &::before {
+        content: "-";
+        display: inline-block;
+        font-size: 35px;
+        margin-right: 10px;
+        opacity: .6;
+    }
 }
 
 .block-subtitle__me {
