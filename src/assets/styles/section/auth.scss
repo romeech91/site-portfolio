@@ -23,5 +23,116 @@
     flex-direction: column;
     &-input {
         margin: 12px 0;
+        padding: 8px;
+        background-color: #fff;
+        border: 1px solid gray;
+        height: 100%;
     }
+    &-check {
+        display: flex;
+        justify-content: center;
+        margin: 10px 0;
+    }
+}
+
+.form__auth-login, .form__auth-pass {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.form__auth-icon {
+    width: 18px;
+    height: 18px;
+    fill: grey;
+}
+
+.form__auth-input_pic {
+    background-color: lightblue;
+    position: relative;
+    height: 100%;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px 0 0 5px;
+}
+
+.form__auth-checkbox {
+    display: none;
+    &--style {
+        position: relative;
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background-color: #fff;
+        border: 1px solid gray;
+        border-radius: 3px;
+        &::before {
+            background: url(assets/images/checkmark.svg) 50% no-repeat;
+            transform: scale(0);
+            transition: .3s ease;
+            background-size: cover;
+            content: "";
+            display: inline-block;
+            height: 18px;
+            left: 2px;
+            position: absolute;
+            top: 2px;
+            width: 18px;
+        }
+    }
+}
+
+.form__auth-checkbox_text {
+    margin-left: 10px;
+}
+
+.form__auth-checkbox:checked+.form__auth-checkbox--style::before {
+    transform: scale(1);
+}
+
+.auth-radio-btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.auth-radio__question {
+    margin: 10px;
+    font-weight: 600;
+}
+
+.auth-radio__btn {
+    display: flex;
+}
+
+.auth-radio__input {
+    display: none;
+    &--style {
+        position: relative;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        border: 1px solid gray;
+        border-radius: 50%;
+        margin-right: 9px;
+        &::before {
+            background-color: grey;
+            border-radius: 50%;
+            content: "";
+            height: 8px;
+            left: 5px;
+            position: absolute;
+            top: 5px;
+            width: 8px;
+            transform: scale(0);
+            transition: .3s ease-out;
+        }
+    }
+}
+
+.auth-radio__input:checked+.auth-radio__input--style::before {
+    transform: scale(1);
 }

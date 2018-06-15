@@ -5,14 +5,29 @@ block content
         .hero__bg-block_auth
             .block-subtitle.title-auth Авторизуйтесь
             .form__auth
-                input.form__auth-input(type="text", placeholder='Логин') 
-                input.form__auth-input(type="password", placeholder='Пароль')
-                label(for="human")
+                label.form__auth-login
+                    .form__auth-input_pic
+                        +icon('login', 'form__auth-icon')
+                    input.form__auth-input(type="text", placeholder='Логин') 
+                label.form__auth-pass
+                    .form__auth-input_pic
+                        +icon('password', 'form__auth-icon')
+                    input.form__auth-input(type="password", placeholder='Пароль')
+                label.form__auth-check
                     input.form__auth-checkbox(type="checkbox", name="human")
-                    span Я человек
+                    .form__auth-checkbox--style
+                    span.form__auth-checkbox_text Я человек
                 .form__auth-radio
-                    input(type="radio", name="radio_btn")
-                    input(type="radio", name="radio_btn") 
+                    .auth-radio__question Вы точно не робот?
+                    .auth-radio-btns
+                        label.auth-radio__btn
+                            input(type="radio", name="radio_btn").auth-radio__input
+                            .auth-radio__input--style
+                            p Да
+                        label.auth-radio__btn
+                            input(type="radio", name="radio_btn").auth-radio__input
+                            .auth-radio__input--style 
+                            p Не уверен
             .link__buttons
                 a(href="works.html").link__button На главную
                 a(href="blog.html").link__button Войти
