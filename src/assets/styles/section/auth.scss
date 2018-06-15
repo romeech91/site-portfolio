@@ -25,7 +25,7 @@
         margin: 12px 0;
         padding: 8px;
         background-color: #fff;
-        border: 1px solid gray;
+        border: 1px solid #c4cbcd69;
         height: 100%;
     }
     &-check {
@@ -45,11 +45,11 @@
 .form__auth-icon {
     width: 18px;
     height: 18px;
-    fill: grey;
+    fill: #c4cbcd;
 }
 
 .form__auth-input_pic {
-    background-color: lightblue;
+    background-color: #f0efe9;
     position: relative;
     height: 100%;
     width: 40px;
@@ -101,6 +101,8 @@
 .auth-radio__question {
     margin: 10px;
     font-weight: 600;
+    display: flex;
+    justify-content: center;
 }
 
 .auth-radio__btn {

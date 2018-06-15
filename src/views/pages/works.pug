@@ -33,7 +33,8 @@ block content
         .about-me__feedback
             .comments
                 .comments__block.comments__block-left
-                    .comments__block-quote
+                    .comments__block-quote 
+                        p.comments__block-quote_inner &ldquo;
                     .comments__block-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4 месяца только самых тяжелых испытаний и бессонных ночей!
                     .comments__block-person
                         +image('person1.png', 'фотография', 'comments__block-person_img')
@@ -41,6 +42,8 @@ block content
                             .comments__block-person_name Ковальчук Дмитрий
                             .comments__block-person_position основатель Loftschool
                 .comments__block.comments__block-right
+                    .comments__block-quote 
+                        p.comments__block-quote_inner &ldquo;
                     .comments__block-text Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
                     .comments__block-person
                         +image('person2.png', 'фотография', 'comments__block-person_img')
