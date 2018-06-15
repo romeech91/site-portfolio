@@ -1,4 +1,4 @@
-mixin hero-header(section, name, desc, iconBg, descPos, fontFamily)
+mixin hero-header(section, name, desc, iconBg, descPos, fontFamily, arrow)
     section(class=`${section}`)
       -
         var socials = [
@@ -20,5 +20,5 @@ mixin hero-header(section, name, desc, iconBg, descPos, fontFamily)
         .user__description(class=`${descPos}`)
             div(class=`${fontFamily}`).user__name=(`${name}`) 
             .user__info=(`${desc}`)
-      .down-btn
+      div(class=`${arrow}`).down-btn
         +icon('arrow_down', 'hero__down-btn')

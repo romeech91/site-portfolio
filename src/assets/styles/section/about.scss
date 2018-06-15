@@ -236,6 +236,31 @@
     padding: 15px;
 }
 
+.socials__list {
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+}
+
+.socials__item-around {
+    margin: 0 3px;
+}
+
+.socials__icon-footer {
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    fill: #3d5556;
+    height: 35px;
+    width: 35px;
+    transition: .3s ease;
+    &:hover {
+        fill: #fff;
+        background-color: #3d5556;
+        border: 1px solid #3d5556;
+    }
+}
+
 .map {
     height: 670px;
     background-image: url('./assets/images/map-pseudo.jpg');
