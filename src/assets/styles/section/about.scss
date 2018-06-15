@@ -122,10 +122,12 @@
         background-color: #efeee9;
         width: 50%;
         text-align: center;
+        position: relative;
     }
     &__right {
         width: 50%;
         background-color: beige;
+        position: relative;
     }
 }
 
@@ -322,6 +324,7 @@
     }
     &__icon {
         margin: 0 15px;
+        margin-left: 9%;
     }
     &__item {
         display: flex;
@@ -336,4 +339,13 @@
 
 .block-subtitle {
     margin: 20px 0;
+}
+
+.block-title_bg-about {
+    opacity: .08;
+    left: 17%;
+    top: -3%;
+    width:;
+    width: 70%;
+    position: absolute;
 }
