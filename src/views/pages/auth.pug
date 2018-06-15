@@ -1,0 +1,21 @@
+extends ../auth.layout.pug
+
+block content
+    section.hero-welcome
+        .hero__bg-block_auth
+            .block-subtitle.title-auth Авторизуйтесь
+            .form__auth
+                input.form__auth-input(type="text", placeholder='Логин') 
+                input.form__auth-input(type="password", placeholder='Пароль')
+                label(for="human")
+                    input.form__auth-checkbox(type="checkbox", name="human")
+                    span Я человек
+                .form__auth-radio
+                    input(type="radio", name="radio_btn")
+                    input(type="radio", name="radio_btn") 
+            .link__buttons
+                a(href="works.html").link__button На главную
+                a(href="blog.html").link__button Войти
+        
+        .copyright-welcome
+            small © Роман Казаков | создано с любовью в LoftSchool | 2018

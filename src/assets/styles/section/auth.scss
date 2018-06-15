@@ -1,0 +1,27 @@
+.hero__bg-block_auth {
+    background-color: #fcfcfc;
+    display: flex;
+    height: 395px;
+    opacity: .8;
+    width: 380px;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title-auth {
+    font-size: 36px;
+}
+
+.form__auth {
+    display: flex;
+    flex-direction: column;
+    &-input {
+        margin: 12px 0;
+    }
+}
