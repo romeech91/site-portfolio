@@ -250,6 +250,10 @@
 .footer__row {
     width: 100%;
     display: flex;
+    @include tablets {
+        flex-direction: column;
+        text-align: center;
+    }
     &:first-child {
         border-bottom: 2px solid rgba(255, 255, 255, 0.18);
     }
@@ -257,6 +261,15 @@
 
 .footer__col {
     width: 50%;
+    @include tablets {
+        width: 100%;
+    }
+}
+
+.menu__list {
+    @include tablets {
+        text-align: center;
+    }
 }
 
 .footer__col_justify_end {
