@@ -39,6 +39,10 @@
     border-radius: 8px;
     justify-content: space-around;
     align-items: flex-end;
+    @include phones {
+        width: 300px;
+        height: 405px;
+    }
 }
 
 .user__description-welcome {
@@ -80,6 +84,9 @@
             border-radius: 0 0 0px 8px;
         }
     }
+    @include phones {
+        font-size: 13px;
+    }
 }
 
 .maincontent:after {
@@ -101,6 +108,11 @@
     &:hover {
         background-color: #fff;
         color: #00bfa5;
+    }
+    @include phones {
+        right: -3%;
+        top: 7%;
+        transform: translate(-50%, -50%);
     }
 }
 

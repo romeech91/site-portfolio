@@ -52,4 +52,7 @@
     margin-left: 18px;
     font-size: 28px;
     font-weight: 500;
+    @include phones {
+        margin-right: 142px;
+    }
 }
