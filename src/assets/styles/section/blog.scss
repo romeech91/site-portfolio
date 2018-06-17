@@ -21,6 +21,7 @@
     @include phones {
         height: 555px;
         margin-bottom: 30px;
+        clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
     }
 }
 
