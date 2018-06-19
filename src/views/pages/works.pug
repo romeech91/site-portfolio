@@ -6,13 +6,57 @@ block variables
 block content
     .hero__bg-beige.hero__bg-full
     include ../common/hero-sec.pug
-    +hero-header('hero-works', 'Казаков Роман', 'Личный сайт разработчика')
+    +hero-header('hero-works', 'Казаков Роман', 'Личный сайт разработчика', 'portfolio_header')
     .works__block-title
+        +icon('works_header', 'block-title_bg')
         .block-title.block-title_works Мои работы
+        
     section.my-works
         .my-works__left
             .block-subtitle.works__site-name Сайт магазина бургеров
-            .works__site-desc Html, Css, Javascript
+            .works__site-desc
+                .works__site-desc_inner Html, Css, Javascript
             a.works__site-link(href="#") Посмотреть сайт
+                +icon('link', 'works__site-link_pic')
         .my-works__right
-            p Pictures burgers
+            .widget
+                .widget__main-preview
+                .widget__btns-preview
+                    .widget__btn-down
+                        +icon('portf_arrow_down', 'widget__btn-down_pic')
+                    .widget__btn-up
+                        +icon('portf_arrow_up', 'widget__btn-up_pic')
+    section.about-me
+        .about-me__title
+            +icon('about_header', 'block-title_bg')
+            .about-me__title-inner.block-title Что обо мне говорят
+        .about-me__feedback
+            .comments
+                .comments__block.comments__block-left
+                    .comments__block-quote 
+                        p.comments__block-quote_inner &ldquo;
+                    .comments__block-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4 месяца только самых тяжелых испытаний и бессонных ночей!
+                    .comments__block-person
+                        +image('person1.png', 'фотография', 'comments__block-person_img')
+                        .names-side
+                            .comments__block-person_name Ковальчук Дмитрий
+                            .comments__block-person_position основатель Loftschool
+                .comments__block.comments__block-right
+                    .comments__block-quote 
+                        p.comments__block-quote_inner &ldquo;
+                    .comments__block-text Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+                    .comments__block-person
+                        +image('person2.png', 'фотография', 'comments__block-person_img')
+                        .names-side
+                            .comments__block-person_name Сабанцев Владимир
+                            .comments__block-person_position преподаватель
+            form.form
+                .form__blur
+                .block-subtitle.subtitle-form Cвязаться со мной
+                .form__inputs
+                    input.form__input(type="text", placeholder='Имя')
+                    input.form__input(type="text", placeholder='Email')
+                    textarea(name="", cols="10", rows="8", type="text", placeholder='Ваше сообщение').form__textarea
+                .form__buttons
+                    button(type="submit").form__btn-submit.form__btn Отправить
+                    button(type="reset").form__btn-clear.form__btn Очистить

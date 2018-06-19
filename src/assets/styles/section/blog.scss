@@ -35,12 +35,21 @@
     text-align: right;
 }
 
+.blog__desc {
+    top: 65%;
+}
 
 .blog__item {
+    cursor: pointer;
     width: 100%;
     margin-bottom: 20px;
     padding: 0 10px;
+    transition: .3s ease;
     &--active {
+        border-right: 3px solid #00bfa5;
+        color: #00bfa5;
+    }
+    &:hover {
         border-right: 3px solid #00bfa5;
         color: #00bfa5;
     }
@@ -107,4 +116,8 @@ b {
 i {
     color: #84ac32;
     font-style: normal;
+}
+
+.arrow-none {
+    display: none;
 }

@@ -3,17 +3,32 @@ footer.footer
       .footer__col
         nav.menu
           ul.menu__list
-            each item in ['Мои работы', 'Обо мне', 'Блог', 'Авторизация']
+            - 
+              var links = [
+                ['Мои работы', 'works.html'],
+                ['Обо мне', 'about.html'],
+                ['Блог', 'blog.html'],
+                ['Авторизация', 'auth.html'],
+              ]
+            each item in links
               li.menu__item
-                a(href='#').menu__link #{item}
+                a(href=item[1]).menu__link #{item[0]}
 
       .footer__col.footer__col_justify_end
-        //-+socials(socials, 'socials_round')
-
-
+        -
+            var socials = [
+              ['vk_round', 'http://vk.com'],
+              ['github_round', 'http://github.com'],
+              ['in_round', 'http://in.com']
+            ]
+        ul.socials__list
+          each item in socials
+            li.socials__item-around
+              a(href='item[1]').socials__item-link
+                +icon(item[0], 'socials__link-icon socials__icon-footer')
     .footer__row
       .footer__col
         .footer__text
           p Я веб-разработчик из Санкт-Петерубрга, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
       .footer__col.footer__col_justify_end
-        p © Роман Казаков | создано с любовью в LoftSchool | 2018
+        small © Роман Казаков | создано с любовью в LoftSchool | 2018
