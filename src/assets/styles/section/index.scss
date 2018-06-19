@@ -1,11 +1,25 @@
 .social__link-welcome {
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100;
+    display: block;
 }
 
+.socials__icon-welcome {
+    width: 26px;
+    height: 26px;
+    fill: #73d5c9;
+    &:hover {
+        fill: #00bfa5;
+    }
+}
+
+.user__info-welcome {
+    text-align: center;
+}
+
+.user__welcome {
+    @include phones {
+        text-align: center;
+    }
+}
 
 .hero-welcome {
     background-image: url('./assets/images/welcome.jpg');
@@ -16,29 +30,33 @@
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     color: #455a64;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .socials__item-welcome {
-    fill: gray;
+    fill: #73d5c9;
     opacity: 1;
     transition: .3s;
+    display: inline-block;
     &:hover {
         fill: #fcfcfc;
     }
 }
 
-.hero__bg-block {
+.hero__bg-block {   //КАРТОЧКА
     background-color: #fcfcfcd1;
+    padding-top: 15px;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     height: 395px;
     width: 380px;
-    position: absolute;
-    top: 48%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     border-radius: 8px;
-    justify-content: space-around;
-    align-items: flex-end;
     @include phones {
         width: 300px;
         height: 405px;
@@ -49,12 +67,22 @@
     color: #455a64;
 }
 
+.user__pic_welcome {
+    background-image: url(assets/images/avatar.jpg);
+    background-position: 50%;
+    background-size: cover;
+    border-radius: 50%;
+    height: 141px;
+    width: 141px;
+}
+
 .link__buttons {
     display: flex;
     background-color: #00bfa5;
     border-radius: 0 0 8px 8px;
     width: 100%;
     height: 50px;
+    align-self: flex-end;
 }
 
 .link__button {
@@ -89,38 +117,30 @@
     }
 }
 
-.maincontent:after {
-    content: "";
-    display: block;
-    height: 137px;
-    width: 100%;
-}
 
 .auth__btn {
     border-radius: 6px;
     border: 1px solid white;
     padding: 10px 25px;
     color: white;
-    position: absolute;
-    right: 2%;
-    top: 2%;
     transition: .4s;
+    align-self: flex-end;
+    position: relative;
+    top: 3%;
+    right: 3%;
     &:hover {
         background-color: #fff;
         color: #00bfa5;
     }
     @include phones {
-        right: -3%;
-        top: 7%;
-        transform: translate(-50%, -50%);
+        align-self: center;
+        right: 0;
     }
 }
 
 .copyright-welcome {
-    position: absolute;
-    margin: 0 auto;
-    bottom: 4%;
-    left: 50%;
     color: #fff;
-    transform: translate(-50%, -50%);
+    position: relative;
+    bottom: 2%;
+    text-align: center;
 }

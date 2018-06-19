@@ -1,6 +1,11 @@
 .socials__link-icon {
     width: 25px;
     height: 25px;
+    fill: #d3dad9;
+    transition: .4s ease-out;
+    &:hover {
+        fill: #fff;
+    }
 }
 
 .hero {

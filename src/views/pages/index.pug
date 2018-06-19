@@ -5,27 +5,27 @@ block content
       
       a(href='auth.html').auth__btn Авторизоваться
       .hero__bg-block
-        .link__buttons
-          a(href="works.html").link__button Мои работы
-          a(href="about.html").link__button Обо мне
-          a(href="blog.html").link__button Блог
-      .hero__user.user
+        .user__pic_welcome
+        .user__description-welcome
+            .user__name.user__welcome Роман Казаков
+            .user__info-welcome Личный сайт разработчика
         -
           var socials = [
             ['vk', 'http://vk.com'],
             ['github', 'http://github.com'],
             ['in', 'http://in.com']
           ]
-
-        ul.socials.hero__links.social__link-welcome
+        ul.social__link-welcome
           each item in socials
             li.socials__item.socials__item-welcome
               a(href=`${item[1]}`).socials__link
-                +icon(item[0], 'socials__link-icon')
-        .user__pic
-        .user__description.user__description-welcome
-          block desc-change
-            .user__name Роман Казаков
-            .user__info Личный сайт разработчика
+                +icon(item[0], 'socials__icon-welcome')
+        .link__buttons
+          a(href="works.html").link__button Мои работы
+          a(href="about.html").link__button Обо мне
+          a(href="blog.html").link__button Блог
+
+        
+        
       .copyright-welcome
         small © Роман Казаков | создано с любовью в LoftSchool | 2018
