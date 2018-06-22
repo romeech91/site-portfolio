@@ -10,15 +10,17 @@ h1 {
     height: 600px;
     -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%);
     clip-path: polygon(0% 0%, 100% 0, 100% 85%, 50% 100%, 0 85%);
-    &__links {
-        display: flex;
-        position: absolute;
-        top: 2%;
-        left: 3%;
-    }
     @include phones {
         clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
+        height: 560px;
     }
+}
+
+.hero__links {
+    display: flex;
+    position: absolute;
+    top: 2%;
+    left: 3%;
 }
 
 .hero__bg-full {
@@ -59,6 +61,7 @@ h1 {
     color: #373e42;
     @include phones {
         font-size: 35px;
+        height: 41px;
     }
 }
 
@@ -80,10 +83,12 @@ h1 {
         height: 100%;
         @include tablets {
             height: 71%;
+            line-height: 1;
         }
         @include phones {
             height: 88%;
             font-size: 60px;
+            line-height: 0.4;
         }
     }
     &::before {
@@ -95,15 +100,12 @@ h1 {
         height: 100%;
         @include tablets {
             height: 71%;
+            line-height: 1;
         }
         @include phones {
             height: 88%;
             font-size: 60px;
-        }
-    }
-    &-inner {
-        @include phones {
-            font-size: 30px;
+            line-height: 0.4;
         }
     }
     @include tablets {
@@ -124,44 +126,51 @@ h1 {
     @include tablets {
         width: 100%;
     }
+    @include phones {
+        width: 100%;
+        font-size: 35px;
+    }
 }
 
 .my-works {
     width: 100%;
     height: 700px;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+        'desc preview'
+        'desc preview'
+        'desc arrows'
+}
+.my-works {
     &__left {
-        background-color: #f0efe9;
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        grid-area: desc;
     }
     &__right {
-        width: 50%;
         background-color: #efebe0;
+        grid-area: preview;
     }
 }
 
 .works__site-desc {
-    padding: 10px;
+    /* padding: 10px;
     text-transform: uppercase;
     border-top: 2px solid gray;
     border-bottom: 2px solid gray;
     margin-bottom: 30px;
     width: 60%;
-    text-align: center;
+    text-align: center; */
 }
 
 .works__site-name {
-    margin: 0;
+    /* margin: 0;
     font-size: 35px;
-    margin-bottom: 20px;
+    margin-bottom: 20px; */
 }
 
 .works__site-link {
-    color: #fff;
+    /* color: #fff;
     background-color: #00bfa5;
     padding: 10px 15px;
     border-radius: 6px;
@@ -172,7 +181,7 @@ h1 {
         float: left;
         height: 20px;
         margin-right: 5px;
-    }
+    } */
 }
 
 .works__site-link:hover {
@@ -181,8 +190,10 @@ h1 {
 }
 
 .widget {
-    width: 100%;
+    grid-area: arrows;
+/*     width: 100%;
     height: 100%;
+    
     &__main-preview {
         height: 70%;
         width: 100%;
@@ -193,16 +204,17 @@ h1 {
         width: 100%;
         background-color: aqua;
         display: flex;
-    }
+    } */
 }
 
 .widget__btn-down {
-    width: 50%;
+    grid-area: dwnArrow;
+/*     width: 50%;
     height: 100%;
     background-color: aquamarine;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     &_pic {
         fill: #fff;
         width: 50px;
@@ -211,11 +223,12 @@ h1 {
 }
 
 .widget__btn-up {
-    width: 50%;
+    grid-area: upArrow;
+/*     width: 50%;
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     &_pic {
         fill: #fff;
         width: 50px;

@@ -344,7 +344,7 @@
 
 .menu__item {
     display: inline-block;
-    margin: 20px 17px;  
+    margin: 17px 17px;  
     @include phones {
         margin: 11px 8px;
         font-size: 13px;
@@ -366,7 +366,7 @@
 .footer {
     background-color: #3d5556;
     opacity: 0.85;
-    margin-top: -137px;
+    margin-top: -235px;
 }
 
 .footer__text {
@@ -454,12 +454,12 @@
     position: relative;
 }
 
-/* .maincontent:after {
+.maincontent:after {
     content: "";
-    height: 137px;
+    height: 235px;
     width: 100%;
     display: block;
-} */
+}
 
 .contacts {
     position: absolute;
