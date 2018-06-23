@@ -2,8 +2,8 @@
     {
         "skillsGroup": "Frontend",
         "skills": {
-            "html5": 30,
-            "css3": 35,
+            "html5": 90,
+            "css3": 85,
             "JavaScript & JQuery": 30
         }
     },
@@ -19,7 +19,7 @@
     {
         "skillsGroup": "Workflow",
         "skills": {
-            "Git": 45,
+            "Git": 85,
             "Gulp": 60,
             "Yarn": 40
         }
