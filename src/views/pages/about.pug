@@ -37,19 +37,8 @@ block content
             ['Backend', [['PHP', 30], ['mySQL', 40], ['Node.js', 50], ['Mongo.db', 40]]],
             ['Workflow', [['Git', 90], ['Gulp', 85], ['Webpack', 80]]]
           ]
-
-        ul.skill-list
-          each skillsrow in skills
-            li.skill-list__item.skills-row
-              .skills-row__title #{skillsrow[0]}
-              ul.skill-row__list
-                each skill in skillsrow[1]
-                  li.skill-row__item
-                    figure.skill
-                      svg(viewbox='0 0 100 100' preserveAspectRatio='none').skill__figure
-                        circle(cx='50' cy='50' r='40').skill__circle.skill__circle_inder
-                        circle(cx='50' cy='50' r='40').skill__circle.skill__circle_above
-                    .skill__title #{skill[0]}
+        #skills-container
+       
   section.map
     .google-map
     .map__data
