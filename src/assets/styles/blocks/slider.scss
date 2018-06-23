@@ -1,0 +1,97 @@
+.slider {
+    /* height: 100vh; */
+    min-height: 650px;
+    background: #f0efe9;
+    display: grid;
+    grid-template: 
+        "info display" 70%
+        "info buttons" 30%
+        / 1fr 1fr;
+    @include tablets {
+        grid-template: 
+        "display" 400px
+        "info" 300px
+        "buttons" 200px
+        / 1fr;
+    }
+}
+
+.slider__info-container {
+    grid-area: info;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider__display {
+    grid-area: display;
+    background: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider__buttons {
+    grid-area: buttons;
+    display: flex;
+}
+
+.slider__button {
+    cursor: pointer;
+    user-select: none;
+    transition: .5s;
+    width: 50%;
+    position: relative;
+    &:hover {
+        opacity: .7;
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(#000, .5);
+        z-index: 10;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 44px;
+        height: 29px;
+        background: svg-load("portf_arrow_down.svg", fill="#ffffff") center center no-repeat / contain;
+        z-index: 20;
+    }
+    &--next {
+        &:after {
+            background: svg-load("portf_arrow_up.svg", fill="#ffffff") center center no-repeat / contain;
+        }
+    }
+}
+
+.slider__big-pic {
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.slider__button-img-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider__button-pic {
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+}

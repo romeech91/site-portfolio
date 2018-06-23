@@ -22,10 +22,10 @@ body {
 }
 
 .maincontent:after {
-  content: '';
-  display: block;
+  content: "";
+  height: 138px;
   width: 100%;
-  height: 137px;
+  display: block;
 }
 
 .container {
