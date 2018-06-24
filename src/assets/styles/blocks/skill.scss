@@ -1,5 +1,7 @@
 .skill {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     width: 110px;
     height: 110px;
@@ -18,13 +20,13 @@
 .skill__circle {
     fill: transparent;
     stroke: #ccc;
-    stroke-width: 15px;
+    stroke-width: 20px;
 }
 
 .skill__circle_above {
     stroke: $green;
     stroke-dasharray: 251;
-    stroke-dashoffset: 142;
+    stroke-dashoffset: 251;
 }
 
 .skill-list {
@@ -44,12 +46,17 @@
 }
 
 .skill__title {
-    position: absolute;
-    top: 41%;
+    font-size: 13px;
+    position: relative;
+    left: -4%;
+    top: 3%;
 }
 
 .skills-row__title {
     margin-left: 18px;
     font-size: 28px;
     font-weight: 500;
+    @include phones {
+        margin-right: 142px;
+    }
 }

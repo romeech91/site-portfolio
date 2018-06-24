@@ -1,6 +1,11 @@
 .socials__link-icon {
     width: 25px;
     height: 25px;
+    fill: #d3dad9;
+    transition: .4s ease-out;
+    &:hover {
+        fill: #fff;
+    }
 }
 
 .hero {
@@ -11,10 +16,17 @@
     height: 600px;
     -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%);
     clip-path: polygon(0% 0%, 100% 0, 100% 85%, 50% 100%, 0 85%);
+    @include tablets {
+        height: 505px;
+    }
+    @include phones {
+        height: 555px;
+        clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
+    }
     &__links {
         display: flex;
         position: absolute;
-        top: 2%;
+        top: 6%;
         left: 3%;
     }
     &__bg-beige {
@@ -47,6 +59,9 @@
     &__name {
         font-size: 35px;
         font-weight: 600;
+        @include phones {
+            width: 280px;
+        }
     }
     &__info {
         font-size: 16px;
@@ -59,7 +74,6 @@
         transform: translate(-50%, -50%);
         text-align: center;
         color: #fff;
-
     }
     &__pic {
         width: 141px;
@@ -117,23 +131,53 @@
     position: relative;
     width: 100%;
     display: flex;
-
     &__left {
         background-color: #efeee9;
         width: 50%;
         text-align: center;
         position: relative;
+        @include tablets {
+            width: 100%;
+        }
     }
     &__right {
         width: 50%;
         background-color: beige;
         position: relative;
+        @include tablets {
+            width: 100%;
+        }
+    }
+    @include tablets {
+        flex-direction: column;
+    }
+}
+
+
+.about__right-description {
+    margin: 40px 40px;
+    @include tablets {
+        width: 400px;
+        margin: 25px auto;
+    }
+    @include phones {
+        width: 90%;
     }
 }
 
 .about__left-content {
     width: 80%;
     margin: 0 auto;
+    @include phones {
+        width: 100%;
+    }
+}
+
+.about__right-content {
+    padding-left: 20px;
+    @include tablets {
+        text-align: center;
+    }
 }
 
 .user-description {
@@ -148,6 +192,25 @@
         width: 100%;
         height: 100%;
         object-fit: contain;
+    }
+    &__text {
+        width: 70%;
+        text-align: left;
+        margin: 20px auto 40px auto;
+        @include tablets {
+            margin: 25px auto;
+            width: 400px;
+            text-align: left;
+        }
+        @include phones {
+            width: 90%;
+        }
+    }
+}
+
+.hero__bg-beige_about {
+    @include tablets {
+        background-color: #efeee9;
     }
 }
 
@@ -171,21 +234,46 @@
     }
 }
 
-/* .block-title__about {
-    fill: #e6e5e1;
-    position: absolute;
-    left: 3%;
-    top: 10%;
-} */
+.block-title__about-block {
+    font-size: 63px;
+    font-family: 'BERNIER',
+    sans-serif;
+    margin: 15px 0;
+    margin-bottom: 50px;
+    @include phones {
+        font-size: 50px;
+        margin: 0;
+    }
+    &::after {
+        content: "-";
+        display: inline-block;
+        font-size: 63px;
+        margin-left: 5px;
+        opacity: .6;
+    }
+
+    &::before {
+        content: "-";
+        display: inline-block;
+        font-size: 63px;
+        margin-right: 5px;
+        opacity: .6;
+    }
+}
 
 .block-subtitle {
     text-transform: uppercase;
     font-family: 'BERNIER', sans-serif;
+    
+}
+
+.block-subtitle__me {
+    font-size: 35px;
     &::after {
         content: "-";
         display: inline-block;
         font-size: 35px;
-        margin-left: 10px;
+        margin-left: 5px;
         opacity: .6;
     }
 
@@ -193,19 +281,55 @@
         content: "-";
         display: inline-block;
         font-size: 35px;
-        margin-right: 10px;
+        margin-right: 5px;
         opacity: .6;
     }
-}
-
-.block-subtitle__me {
-    font-size: 35px;
 }
 
 .about__right-title {
     text-align: center;
     font-size: 35px;
     font-family: 'BERNIER', sans-serif;
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+    &::after {
+        content: "-";
+        display: inline-block;
+        font-size: 63px;
+        margin-left: 5px;
+        opacity: .6;
+        @include phones {
+            font-size: 51px;
+            line-height: 1.6;
+
+        }
+    }
+    &::before {
+        content: "-";
+        display: inline-block;
+        font-size: 63px;
+        margin-right: 5px;
+        opacity: .6;
+        @include phones {
+            font-size: 51px;
+            line-height: 1.6;
+
+        }
+    }
+    @include phones {
+        font-size: 30px;
+        width: 83%;
+        margin: 0 auto;
+        display: flex;
+
+    }
+}
+
+.block-subtitle__about {
+    width: 100%;
+    margin: 0 auto;
+    
 }
 
 .text-content {
@@ -220,7 +344,11 @@
 
 .menu__item {
     display: inline-block;
-    margin: 20px 17px;  
+    margin: 17px 17px;  
+    @include phones {
+        margin: 11px 8px;
+        font-size: 13px;
+    }
 }
 
 .menu__link {
@@ -229,83 +357,21 @@
     font-weight: 500;
 }
 
-.socials__item-round {
-    display: inline-block;
-    border: 1px solid black;
-    border-radius: 50%;
-}
-
-.footer {
-    background-color: #3d5556;
-    opacity: 0.85;
-    margin-top: -137px;
-}
-
-.footer__text {
-    color: #fff;
-    font-weight: 300;
-    padding: 15px;
-}
-
-.footer__row {
-    width: 100%;
-    display: flex;
-    &:first-child {
-        border-bottom: 2px solid rgba(255, 255, 255, 0.18);
-    }
-}
-
-.footer__col {
-    width: 50%;
-}
-
-.footer__col_justify_end {
-    font-size: 16px;
-    font-weight: 300;
-    color: #fff;
-    text-align: end;
-    padding: 15px;
-}
-
-.socials__list {
-    display: flex;
-    justify-content: flex-end;
-    text-align: center;
-}
-
-.socials__item-around {
-    margin: 0 3px;
-}
-
-.socials__icon-footer {
-    background-color: #fff;
-    border: 1px solid #fff;
-    border-radius: 50%;
-    fill: #3d5556;
-    height: 35px;
-    width: 35px;
-    transition: .3s ease;
-    &:hover {
-        fill: #fff;
-        background-color: #3d5556;
-        border: 1px solid #3d5556;
+.menu__list {
+    @include tablets {
+        text-align: center;
     }
 }
 
 .map {
-    height: 670px;
+    height: 973px;
     background-image: url('./assets/images/map-pseudo.jpg');
     background-position: center;
     background-size: cover;
     position: relative;
 }
 
-/* .maincontent:after {
-    content: "";
-    height: 137px;
-    width: 100%;
-    display: block;
-} */
+
 
 .contacts {
     position: absolute;
@@ -330,6 +396,14 @@
         display: flex;
         align-items: center;
         height: 40px;
+        @include phones {
+            font-size: 13px;
+        }
+    }
+    @include phones {
+        width: 100%;
+        top: 21%;
+        box-shadow: 0 0 0;
     }
 }
 
@@ -347,4 +421,8 @@
     top: -3%;
     width: 70%;
     position: absolute;
+    @include tablets {
+        width: 39%;
+        left: 32%;
+    }
 }
