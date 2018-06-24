@@ -99,7 +99,9 @@
 .slider__info {
     text-align: center;
     &-button {
-        margin: 20px 0;
+        margin: 20px auto;
+        display: flex;
+        justify-content: center;
     }
 }
 
@@ -117,11 +119,28 @@
 }
 
 .button {
+    border: 1px solid #00bfa5;
+    background-color: #00bfa5;
+    color: #fff;
+    border-radius: 6px;
+    height: 45px;
+    width: 200px;
     display: flex;
+    justify-content: center;
     flex-direction: row-reverse;
+    align-items: center;
+    transition: .3s ease;
+    &:hover {
+        background-color: #058372;
+    }
 }
 
 .link-pic {
     width: 24px;
     height: 20px;
+    fill: #fff;
+    padding-right: 5px;
+    &:hover {
+        fill: #00bfa5;
+    }
 }
