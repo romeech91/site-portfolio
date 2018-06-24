@@ -95,3 +95,33 @@
     max-width: 90%;
     max-height: 90%;
 }
+
+.slider__info {
+    text-align: center;
+    &-button {
+        margin: 20px 0;
+    }
+}
+
+.slider__info-skills {
+    border-top: 1px solid #00bfa5;
+    border-bottom: 1px solid #00bfa5;
+    padding: 15px 0;
+    color: #00bfa5;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.subtitle-works {
+    font-size: 35px;
+}
+
+.button {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.link-pic {
+    width: 24px;
+    height: 20px;
+}

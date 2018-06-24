@@ -1,29 +1,22 @@
 [{
         "id": 1,
-        "title": "1 Сайт коворкинга",
-        "skills": "1 Html, Css, Git",
+        "title": "Сайт коворкинга",
+        "skills": "Html, Css, Git",
         "photo": "/assets/images/slider/work-1.png",
         "link": "//google.com"
     },
     {
         "id": 2,
-        "title": "2 Сайт магазина бургеров",
-        "skills": "2 Html, Css, JavaScript",
+        "title": "Сайт магазина бургеров",
+        "skills": "Html, Css, JavaScript, Svg",
         "photo": "/assets/images/slider/work-2.png",
         "link": "//yandex.ru"
     },
     {
         "id": 3,
-        "title": "3 Сайт школы онлайн образования",
-        "skills": "3 Html, Css, JavaScript, Pug",
+        "title": "Сайт портфолио",
+        "skills": "Html, Css, JavaScript, Pug, Webpack, Gulp",
         "photo": "/assets/images/slider/work-3.png",
         "link": "//rambler.ru"
-    },
-    {
-        "id": 4,
-        "title": "4 Сайт школы ремонта",
-        "skills": "4 Html, Css, JavaScript",
-        "photo": "/assets/images/slider/work-4.png",
-        "link": "//vk.com"
     }
 ]
