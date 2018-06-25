@@ -1,5 +1,33 @@
 mixin hero-header(section, name, desc, iconBg, descPos, fontFamily, arrow)
     section(class=`${section}`)
+      .hamburger.ham-toggle
+        .line.one
+        .line.two
+        .line.three
+
+      .hamburger-menu-bg#hamburger-menu-bg
+        .left
+        .right
+
+      nav.hamburger-menu#hamburger-menu
+
+        ul(role="navigation").hamburger-menu__list
+
+          li.hamburger-menu__list-item
+            a(href="/works").hamburger-menu__nav-link
+              span.hamburger-menu__link-text Мои работы
+
+          li.hamburger-menu__list-item
+            a(href="/blog").hamburger-menu__nav-link
+                span.hamburger-menu__link-text Блог
+
+          li.hamburger-menu__list-item
+            a(href="/about").hamburger-menu__nav-link
+                span.hamburger-menu__link-text Обо мне
+
+          li.hamburger-menu__list-item
+            a(href="/").hamburger-menu__nav-link
+                span.hamburger-menu__link-text Главная
       -
         var socials = [
           ['vk', 'http://vk.com'],
