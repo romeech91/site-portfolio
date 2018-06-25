@@ -6,13 +6,14 @@ mixin hero-header(section, name, desc, iconBg, descPos, fontFamily, arrow)
           ['github', 'http://github.com'],
           ['in', 'http://in.com']
         ]
-      ul.socials.hero__links
-        each item in socials
-          li.socials__item
-            a(href=`${item[1]}`).socials__link
-              +icon(item[0], 'socials__link-icon')
-      .hero__menu
-        +icon('hamburger', 'hambg-menu')
+      header.header
+        ul.socials.hero__links
+          each item in socials
+            li.socials__item
+              a(href=`${item[1]}`).socials__link
+                +icon(item[0], 'socials__link-icon')
+        
+        include ./ham-menu
       .hero__title
         +icon(`${iconBg}`, 'section-title__pic')
       .hero__user.user
