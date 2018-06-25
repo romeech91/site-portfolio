@@ -28,16 +28,17 @@ const info = {
         let timer = setTimeout(() => {
           animate(words);
         }, 10);
-        currentLetter.classList.add('bounceInLeft');
+        currentLetter.classList.add('bounceInDown');
         i++;
 
         if (i >= words.length) {
           clearTimeout(timer);
+          done();
         }
       }
       animate(words);
 
-      done();
+      
     }
   }
 };
