@@ -14,6 +14,13 @@
         "buttons" 200px
         / 1fr;
     }
+    @include phones {
+        grid-template:
+        "display" 255px
+        "info" 220px
+        "buttons"  95px
+        / 1fr;
+    }
 }
 
 .slider__info-container {
@@ -29,6 +36,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .slider__buttons {
@@ -127,6 +135,9 @@
 
 .subtitle-works {
     font-size: 35px;
+    @include phones {
+        font-size: 21px;
+    }
 }
 
 .button {
