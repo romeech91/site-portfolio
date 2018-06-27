@@ -1,11 +1,13 @@
 mixin hero-header(section, name, desc, iconBg, descPos, fontFamily, arrow)
-    section(class=`${section}`)
+    section(class=`${section}`).hero-overall
       -
         var socials = [
           ['vk', 'http://vk.com'],
           ['github', 'http://github.com'],
           ['in', 'http://in.com']
         ]
+      .hero__bg
+        img(src="./assets/images/welcome_bg.jpg", alt="фон горы").hero__bg-img
       header.header
         ul.socials.hero__links
           each item in socials
