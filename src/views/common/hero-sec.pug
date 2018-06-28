@@ -6,8 +6,27 @@ mixin hero-header(section, name, desc, iconBg, descPos, fontFamily, arrow)
           ['github', 'http://github.com'],
           ['in', 'http://in.com']
         ]
-      .hero__bg
+      .hero__bg.hero__bg-scroll
         img(src="./assets/images/welcome_bg.jpg", alt="фон горы").hero__bg-img
+
+          //- .parallax
+            //- .parallax__layer
+              //- img(src="assets/images/parallax/Layer_0.png").parallax__image.hero__bg-img
+            //- .parallax__layer
+              //- img(src="assets/images/parallax/Layer_1.png").parallax__image.hero__bg-img
+            //- .parallax__layer
+              //- img(src="assets/images/parallax/Layer_2.png").parallax__image.hero__bg-img
+            //- .parallax__layer
+              //- img(src="assets/images/parallax/Layer_3.png").parallax__image.hero__bg-img
+            //- .parallax__layer
+              //- img(src="assets/images/parallax/Layer_4.png").parallax__image.hero__bg-img
+              //-.parallax__layer
+                //-img(src="assets/images/parallax/Layer_5.png").parallax__image.hero__bg-img
+              //-.parallax__layer
+                //-img(src="assets/images/parallax/Layer_6.png").parallax__image.hero__bg-img
+              //-.parallax__layer
+                //-img(src="assets/images/parallax/Layer_7.png").parallax__image.hero__bg-img
+        
       header.header
         ul.socials.hero__links
           each item in socials
