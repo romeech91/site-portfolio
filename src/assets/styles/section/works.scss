@@ -131,15 +131,12 @@ h1 {
 .about-me {
     background-image: url('./assets/images/works-bg.png');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 2000px;
 }
 
 .about-me__feedback {
     height: 955px;
     width: 100%;
-    /* background-image: url('./assets/images/works-bg.png');
-    background-repeat: no-repeat;
-    background-size: cover; */
     justify-content: space-around;
     align-items: center;
     display: flex;
@@ -225,6 +222,7 @@ h1 {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    overflow: hidden;
     @include phones {
         width: 300px;
         height: 417px;
@@ -290,14 +288,11 @@ h1 {
 }
 
 .form__blur {
-    -moz-filter: blur(5px);
-    -webkit-filter: blur(5px);
-    filter: blur(2px);
+    background: url('./assets/images/works-bg.png') center no-repeat;
+    filter: blur(20px);
     height: 100%;
     position: absolute;
     width: 100%;
-    background-color: #fff;
-    opacity: 0.3;
     z-index: 0;
 }
 
