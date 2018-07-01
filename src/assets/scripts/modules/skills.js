@@ -17,7 +17,6 @@ const skill = {
       window.addEventListener("scroll", function () {
         const positionTop = circle.getBoundingClientRect().top;
         const _top = positionTop.toFixed();
-        console.log(_top);
         if (_top > 450 && _top < 650) {
           circle.style.strokeDashoffset = percents;
         }
@@ -50,7 +49,6 @@ new Vue({
   created() {
     const data = require("../../../data/skills.json");
     this.skills = data;
-    console.log(data);
   },
   template: "#skills-list"
 });

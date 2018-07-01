@@ -1,4 +1,6 @@
+import "./modules/preloader.js";
 import "./modules/parallax-move.js";
+
 
 const btn = document.querySelector('.auth__btn');
 const frontSide = document.querySelector('.hero__bg-block');
