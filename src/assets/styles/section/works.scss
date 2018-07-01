@@ -127,11 +127,8 @@ h1 {
 }
 
 
-
 .about-me {
-    background-image: url('./assets/images/works-bg.png');
-    background-repeat: no-repeat;
-    background-size: 2000px;
+    background: url('./assets/images/works-bg.png') center center; 
 }
 
 .about-me__feedback {
@@ -288,8 +285,8 @@ h1 {
 }
 
 .form__blur {
-    background: url('./assets/images/works-bg.png') center no-repeat;
-    filter: blur(20px);
+    background: url('./assets/images/works-bg.png') center center;
+    filter: blur(2px);
     height: 100%;
     position: absolute;
     width: 100%;
