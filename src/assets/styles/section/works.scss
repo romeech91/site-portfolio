@@ -312,4 +312,8 @@ h1 {
     height: 28px;
     margin-bottom: 70px;
     margin-top: 70px;
+    @include phones {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
 }

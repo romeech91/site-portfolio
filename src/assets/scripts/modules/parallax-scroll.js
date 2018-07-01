@@ -20,40 +20,8 @@ var parallax = (function () {
     }
 }());
 
-//skills mover
-
-var svgScroll = (function () {
-    var svg = document.getElementById('skill__figure'),
-        svgPath = document.querySelectorAll('.skill__circle'),
-        windowMarging = window.innerHeight / 3,
-        svgRect = svg.getBoundingClientRect(),
-        svgPos = svgRect.top;
-    
-    return {
-        grow: function (winScroll) {
-            var startAnimate = wScroll - svgPos + windowMarging,
-                pixelsElapsed = svgPos - winScroll,
-                percentsElapsed = 100 - Math.ceil(pixelsElapsed / windowMarging * 100),
-                percentsDraw = 1200 / 100 * percentsElapsed;
-            
-            if (startAnimate >= 0) {
-                var drawAmount = 1200 - percentsDraw;
-                
-                if (drawAmount > 0) {
-                    svgPath.forEach(function (item) {
-                        item.style.strokeDashoffset = drawAmount;
-                    });
-                }
-            }
-        }
-    }
-}());
-
-
 
 window.onscroll = function () {
     var winScroll = window.pageYOffset;
-
     parallax.init(winScroll);
-    svgScroll.grow(winScroll);
 }
