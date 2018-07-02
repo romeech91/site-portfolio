@@ -9,14 +9,17 @@ html(lang="ru")
     meta(content="width=device-width, initial-scale=1" name="viewport")
     title Portfolio | #{title}
     link(rel='stylesheet' href='main.min.css')
-    script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
     link(rel='shortcut icon' href='https://cdn4.iconfinder.com/data/icons/general-office/91/General_Office_23-512.png')
   body
     .wrapper
       .maincontent
-        
+        .preloader#preloader
+          .preloader__spinner
+            .preloader__animation
+            .preloader__percent#preloader__percent 0%
         block content
-        
+
     include common/footer.pug
   
     include components/entry.pug

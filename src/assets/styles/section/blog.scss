@@ -12,7 +12,7 @@
     background-size: cover;
     position: relative;
     width: 100%;
-    height: 400px;
+    height: 600px;
     -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%);
     clip-path: polygon(0% 0%, 100% 0, 100% 85%, 50% 100%, 0 85%);
     @include tablets {
@@ -138,4 +138,60 @@ i {
 
 .arrow-none {
     display: none;
+}
+
+
+.sidebar-mobile {
+    width: 0%;
+    background-color: darkcyan;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 5;
+    overflow: hidden;
+    transition: .4s ease-in-out;
+    &--active {
+        width: 30%;
+    }
+}
+
+.circle-nav {
+    display: block;
+    width: 0px;
+    height: 50px;
+    background-color: darkcyan;
+    border-radius: 50%;
+    top: 50%;
+    left: -4%;
+    transform: translateY(-50%);
+    position: fixed;
+    transition: .4s ease-in-out;
+    &--active {
+        left: 26%;
+
+    }
+}
+
+
+
+.blog__link-mobile {
+    color: #fff;
+}
+
+.blog__list-mobile {
+    position: relative;
+    left: 0;
+    top: 50%;
+    text-align: left;
+    transform: translateY(-50%);
+    width: 225px;
+}
+
+
+.blog__nav-mobile {
+
 }
