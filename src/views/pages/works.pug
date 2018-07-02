@@ -40,8 +40,8 @@ block content
                 .form__blur
                 .block-subtitle.subtitle-form Cвязаться со мной
                 .form__inputs
-                    input.form__input(type="text", placeholder='Имя')
-                    input.form__input(type="text", placeholder='Email')
+                    input.form__input(type="text", placeholder='Имя', v-model='name')
+                    input.form__input(type="email", placeholder='Email', name='email' v-model='email')
                     textarea(name="", cols="10", rows="8", type="text", placeholder='Ваше сообщение').form__textarea
                 .form__buttons
                     button(type="submit").form__btn-submit.form__btn Отправить

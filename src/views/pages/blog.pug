@@ -9,20 +9,32 @@ block content
   include ../common/hero-sec.pug
   +hero-header('hero-blog', 'Блог', 'Статьи, которые я написал', 'blog_header', 'blog__desc', 'user__blog', 'arrow-none')
   section.blog
+    .sidebar-mobile
+      nav.blog__nav-mobile
+        ul.blog__list.blog__list-mobile
+          li.blog__item.blog__item--active
+            a.blog__link.blog__link-mobile(href='#article1') Самое важное в SASS
+          li.blog__item
+            a.blog__link.blog__link-mobile(href='#article2') Приёмы в вёрстке, без которых не обходится не один сайт
+          li.blog__item
+            a.blog__link.blog__link-mobile(href='#article3') Самый необходимый набор Gulp плагинов
+          li.blog__item
+            a.blog__link.blog__link-mobile(href='#article4') Почему я выбрал Pug
+        button(type='button').circle-nav
     aside.blog__sidebar
       nav.blog__nav
         ul.blog__list
           li.blog__item.blog__item--active
-            span.blog__link Самое важное в SASS
+            a.blog__link(href='#article1') Самое важное в SASS
           li.blog__item
-            span.blog__link Приёмы в вёрстке, без которых не обходится не один сайт
+            a.blog__link(href='#article2') Приёмы в вёрстке, без которых не обходится не один сайт
           li.blog__item
-            span.blog__link Самый необходимый набор Gulp плагинов
+            a.blog__link(href='#article3') Самый необходимый набор Gulp плагинов
           li.blog__item
-            span.blog__link Почему я выбрал Pug
+            a.blog__link(href='#article4') Почему я выбрал Pug
     main.blog__container
       ul.blog__list-text
-        li.blog__text
+        li.blog__text#article1
           h2.blog__text-title Самое важное в SASS
           p.blog__text-date 11 ноября 2017
           p.blog__text-contain Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия. <br> <br> Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
@@ -48,15 +60,15 @@ block content
             tr.table-row
               td.table-1cell-width
               td.table-2cell-width
-        li.blog__text
+        li.blog__text#article2
           h2.blog__text-title Приёмы в вёрстке, без которых не обходится не один сайт
           p.blog__text-date 21 декабря 2017
           p.blog__text-contain Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam est quis corporis, nemo quas a. Illum minus, saepe blanditiis eum dolores distinctio earum odit, magnam eligendi quam modi provident fugiat.Quae corporis rerum asperiores dolorem ipsa cum ex aut, fuga dicta eos voluptatibus iusto sequi vitae velit molestias nemo perferendis voluptatum accusantium repudiandae porro. Excepturi voluptatibus eligendi deserunt ratione praesentium?Maiores voluptates ipsa quas deserunt velit debitis temporibus. Praesentium, fugiat nisi ex, excepturi, molestias vero reprehenderit minima harum quisquam tempore assumenda id sint fugit et nemo quas vitae cumque explicabo.Consectetur quisquam repudiandae voluptatem aperiam, vel quidem necessitatibus consequuntur eius dolorum ut modi ea quas enim, laborum optio. Aut ut non dolorum amet odit magnam deleniti veniam quasi atque quia.
-        li.blog__text
+        li.blog__text#article3
           h2.blog__text-title Самый необходимый набор Gulp плагинов
           p.blog__text-date 21 декабря 2017
           p.blog__text-contain Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam est quis corporis, nemo quas a. Illum minus, saepe blanditiis eum dolores distinctio earum odit, magnam eligendi quam modi provident fugiat.Quae corporis rerum asperiores dolorem ipsa cum ex aut, fuga dicta eos voluptatibus iusto sequi vitae velit molestias nemo perferendis voluptatum accusantium repudiandae porro. Excepturi voluptatibus eligendi deserunt ratione praesentium?Maiores voluptates ipsa quas deserunt velit debitis temporibus. Praesentium, fugiat nisi ex, excepturi, molestias vero reprehenderit minima harum quisquam tempore assumenda id sint fugit et nemo quas vitae cumque explicabo.Consectetur quisquam repudiandae voluptatem aperiam, vel quidem necessitatibus consequuntur eius dolorum ut modi ea quas enim, laborum optio. Aut ut non dolorum amet odit magnam deleniti veniam quasi atque quia.
-        li.blog__text
+        li.blog__text#article4
           h2.blog__text-title Почему я выбрал Pug
           p.blog__text-date 11 июля 2017
           p.blog__text-contain Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam est quis corporis, nemo quas a. Illum minus, saepe blanditiis eum dolores distinctio earum odit, magnam eligendi quam modi provident fugiat.Quae corporis rerum asperiores dolorem ipsa cum ex aut, fuga dicta eos voluptatibus iusto sequi vitae velit molestias nemo perferendis voluptatum accusantium repudiandae porro. Excepturi voluptatibus eligendi deserunt ratione praesentium?Maiores voluptates ipsa quas deserunt velit debitis temporibus. Praesentium, fugiat nisi ex, excepturi, molestias vero reprehenderit minima harum quisquam tempore assumenda id sint fugit et nemo quas vitae cumque explicabo.Consectetur quisquam repudiandae voluptatem aperiam, vel quidem necessitatibus consequuntur eius dolorum ut modi ea quas enim, laborum optio. Aut ut non dolorum amet odit magnam deleniti veniam quasi atque quia.
