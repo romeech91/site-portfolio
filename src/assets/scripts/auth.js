@@ -1,6 +1,5 @@
-import "./modules/preloader.js";
 import "./modules/parallax-move.js";
-
+import "./modules/preloader.js";
 
 const btn = document.querySelector('.auth__btn');
 const frontSide = document.querySelector('.hero__bg-block');
@@ -16,5 +15,5 @@ goMain.addEventListener('click', (e) => {
     e.preventDefault();
     frontSide.style.transform = 'rotateY(0deg)';
     backSide.style.transform = 'rotateY(180deg)';
-})
+});
 
