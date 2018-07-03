@@ -3,7 +3,7 @@
     font-family: "BERNIER", sans-serif;
     font-size: 63px;
     font-weight: 400;
-
+    margin: 0 auto;
 }
 
 .hero-blog {
@@ -156,6 +156,12 @@ i {
     transition: .4s ease-in-out;
     &--active {
         width: 30%;
+        @include phones {
+            width: 61%;
+        }
+        @include iphone6 {
+            width: 55%;
+        }
     }
 }
 
@@ -167,16 +173,29 @@ i {
     border-radius: 50%;
     top: 50%;
     left: -4%;
+    @include phones {
+        left: -11%;
+    }
+    @include iphone6 {
+        left: -10%;
+    }
     transform: translateY(-50%);
     position: fixed;
     transition: .4s ease-in-out;
     &--active {
         left: 26%;
-
+        @include phones {
+            left: 51%;
+        }
+        @include iphone6 {
+            left: 45%;
+        }
     }
 }
 
-
+.blog__item-sidebar--active {
+    text-decoration: underline;
+}
 
 .blog__link-mobile {
     color: #fff;
@@ -189,9 +208,6 @@ i {
     text-align: left;
     transform: translateY(-50%);
     width: 225px;
+    z-index: 10;
 }
 
-
-.blog__nav-mobile {
-
-}

@@ -115,3 +115,4 @@ new Vue({
   },
   template: "#slider"
 });
+
