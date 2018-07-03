@@ -156,12 +156,16 @@ i {
     transition: .4s ease-in-out;
     &--active {
         width: 30%;
-        @include phones {
-            width: 61%;
+        @include iphone6plus {
+            width: 50%;
         }
         @include iphone6 {
             width: 55%;
         }
+        @include phones {
+            width: 61%;
+        }
+        
     }
 }
 
@@ -173,22 +177,28 @@ i {
     border-radius: 50%;
     top: 50%;
     left: -4%;
-    @include phones {
-        left: -11%;
+    @include iphone6plus {
+        left: -9%;
     }
     @include iphone6 {
         left: -10%;
+    }
+    @include phones {
+        left: -11%;
     }
     transform: translateY(-50%);
     position: fixed;
     transition: .4s ease-in-out;
     &--active {
         left: 26%;
-        @include phones {
-            left: 51%;
+        @include iphone6plus {
+            left: 41%;
         }
         @include iphone6 {
             left: 45%;
+        }
+        @include phones {
+            left: 51%;
         }
     }
 }

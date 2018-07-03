@@ -28,6 +28,12 @@
     }
 }
 
+@mixin iphone6plus {
+    @media (max-width: 414px) {
+        @content;
+    }
+}
+
 
 
 /* @function rem($px) {

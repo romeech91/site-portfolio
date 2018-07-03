@@ -3,7 +3,7 @@
         "title": "Сайт коворкинга",
         "skills": "Html, Css, Git",
         "photo": "assets/images/slider/work-1.png",
-        "link": "//google.com"
+        "link": "https://romeech91.github.io/coworking/"
     },
     {
         "id": 2,
@@ -17,6 +17,6 @@
         "title": "Сайт портфолио",
         "skills": "Html, Css, JavaScript, Pug, Webpack, Gulp",
         "photo": "assets/images/slider/work-3.png",
-        "link": "//rambler.ru"
+        "link": "https://romeech91.github.io/site-portfolio/dist/index.html"
     }
 ]

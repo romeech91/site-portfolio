@@ -3,12 +3,13 @@
     width: 380px;
     perspective: 1000px;
     position: relative;
+    @include iphone6 {
+        width: 310px;
+    }
     @include phones {
         width: 300px;
     }
-    @include iphone6 {
-        width: 350px;
-    }
+    
 }
 
 .hero__bg-block {
