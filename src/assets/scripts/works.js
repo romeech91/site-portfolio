@@ -3,3 +3,4 @@ import "./modules/ham-menu.js";
 import "./modules/parallax-scroll.js";
 import "./modules/blur.js";
 import "./modules/preloader.js";
+import "./modules/form-valid.js";

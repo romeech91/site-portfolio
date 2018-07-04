@@ -36,13 +36,15 @@ block content
                         .names-side
                             .comments__block-person_name Сабанцев Владимир
                             .comments__block-person_position преподаватель
-            .form
+            form.form#form
                 .form__blur
                 .block-subtitle.subtitle-form Cвязаться со мной
                 .form__inputs
-                    input.form__input(type="text", placeholder='Имя', v-model='name')
-                    input.form__input(type="email", placeholder='Email', name='email' v-model='email')
-                    textarea(name="", cols="10", rows="8", type="text", placeholder='Ваше сообщение').form__textarea
+                    input.form__input.form__input-name(refs='input', type="text", placeholder='Имя', v-model='parameters.name', @invalid='addErrorClass', @focus='deleteErrorClass', required)
+                    .error-msg Введите имя
+                    input.form__input(type="email", placeholder='Email', name='email', v-model='parameters.email', @invalid='addErrorClass', @focus='deleteErrorClass', required)
+                    .error-msg Неверный email
+                    textarea(cols="10", rows="8", type="text", placeholder='Ваше сообщение' v-model='parameters.text').form__textarea
                 .form__buttons
                     button(type="submit").form__btn-submit.form__btn Отправить
                     button(type="reset").form__btn-clear.form__btn Очистить
