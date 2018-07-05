@@ -2,7 +2,7 @@
 
 var lastId,
     topMenu = $(".blog__nav-mobile"),
-    topMenuHeight = topMenu.outerHeight() + 15,
+    topMenuHeight = topMenu.outerHeight() - 285,
     menuItems = topMenu.find("a"),
     scrollItems = menuItems.map(function () {
         var item = $($(this).attr("href"));
