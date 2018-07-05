@@ -227,6 +227,18 @@ i {
     transform: translateY(-50%);
     width: 225px;
     z-index: 10;
+    @include iphone6plus {
+        width: 205px;
+        font-size: 12px;
+    }
+    @include iphone6 {
+        width: 202px;
+        font-size: 11px;
+    }
+    @include phones {
+        width: 192px;
+        font-size: 11px;
+    }
 }
 
 .fixed {
