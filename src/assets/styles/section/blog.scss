@@ -30,6 +30,7 @@
     justify-content: space-between;
     height: 100%;
     width: 100%;
+
     &__sidebar {
         width: 30%;
         padding-top: 10px;
@@ -170,27 +171,33 @@ i {
 }
 
 .circle-nav {
-    display: block;
+    display: none;
     width: 0px;
     height: 50px;
     background-color: darkcyan;
     border-radius: 50%;
     top: 50%;
-    left: -4%;
+    left: -40px;
+    @include tablets {
+        display: block;
+    }
     @include iphone6plus {
+        display: block;
         left: -9%;
     }
     @include iphone6 {
+        display: block;
         left: -10%;
     }
     @include phones {
+        display: block;
         left: -11%;
     }
     transform: translateY(-50%);
     position: fixed;
     transition: .4s ease-in-out;
     &--active {
-        left: 26%;
+        left: 25%;
         @include iphone6plus {
             left: 41%;
         }
@@ -204,7 +211,8 @@ i {
 }
 
 .blog__item-sidebar--active {
-    text-decoration: underline;
+    font-weight: 700;
+    border-right: 2px solid #fff;
 }
 
 .blog__link-mobile {
@@ -221,3 +229,10 @@ i {
     z-index: 10;
 }
 
+.fixed {
+    position: fixed;
+    left: 0;
+    top: 6%;
+    width: 30%;
+    transition: .5s;
+}

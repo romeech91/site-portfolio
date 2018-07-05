@@ -6,7 +6,6 @@ const links = document.querySelectorAll('.blog__link-mobile');
 window.addEventListener('scroll', () => {
     const posTop = heroSec.getBoundingClientRect().top;
     const top = posTop.toFixed();
-    console.log(top);
     if (top < 380) {
         btn.style.width = "50px";
     } if (top > 380 && sidebar.classList == "sidebar-mobile") {

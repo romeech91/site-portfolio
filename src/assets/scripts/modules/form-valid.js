@@ -1,12 +1,12 @@
 import Vue from "vue";
-
+/* 
 let inputAttr = document.querySelector('.form__input-name').getAttribute('type');
 let inputVal = document.querySelector('.form__input-name').value;
 
 if (inputAttr == 'text' && inputVal >= 0 && inputVal <= 9) {
     console.log('is works!');
 }
-
+ */
 new Vue({
     el: '#form',
     data() {
