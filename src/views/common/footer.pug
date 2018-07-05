@@ -17,14 +17,14 @@ footer.footer
       .footer__col.footer__col_justify_end
         -
             var socials = [
-              ['vk_round', 'http://vk.com'],
-              ['github_round', 'http://github.com'],
-              ['in_round', 'http://in.com']
+              ['vk_round', 'http://vk.com/rampageek'],
+              ['github_round', 'https://github.com/romeech91'],
+              ['in_round', 'https://ru.linkedin.com/']
             ]
         ul.socials__list
           each item in socials
             li.socials__item-around
-              a(href='item[1]').socials__item-link
+              a(href=item[1]).socials__item-link
                 +icon(item[0], 'socials__icon-footer')
     .footer__row
       .footer__col
