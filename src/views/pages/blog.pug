@@ -9,10 +9,11 @@ block content
   include ../common/hero-sec.pug
   +hero-header('hero-blog', 'Блог', 'Статьи, которые я написал', 'blog_header', 'blog__desc', 'user__blog', 'arrow-none')
   section.blog
+    button(type='button').circle-nav
     .sidebar-mobile
       nav.blog__nav-mobile
         ul.blog__list.blog__list-mobile
-          li.blog__item.blog__item--active
+          li.blog__item.blog__item-sidebar--active
             a.blog__link.blog__link-mobile(href='#article1') Самое важное в SASS
           li.blog__item
             a.blog__link.blog__link-mobile(href='#article2') Приёмы в вёрстке, без которых не обходится не один сайт
@@ -20,7 +21,7 @@ block content
             a.blog__link.blog__link-mobile(href='#article3') Самый необходимый набор Gulp плагинов
           li.blog__item
             a.blog__link.blog__link-mobile(href='#article4') Почему я выбрал Pug
-        button(type='button').circle-nav
+    
     aside.blog__sidebar
       nav.blog__nav
         ul.blog__list

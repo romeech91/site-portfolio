@@ -3,7 +3,7 @@
     font-family: "BERNIER", sans-serif;
     font-size: 63px;
     font-weight: 400;
-
+    margin: 0 auto;
 }
 
 .hero-blog {
@@ -30,6 +30,7 @@
     justify-content: space-between;
     height: 100%;
     width: 100%;
+
     &__sidebar {
         width: 30%;
         padding-top: 10px;
@@ -73,7 +74,7 @@
 .blog__text {
     padding: 70px 0;
     &:first-child {
-        padding-top: 0px;
+        padding-top: 20px;
     }
     border-bottom: 2px solid gray;
     width: 90%;
@@ -156,27 +157,63 @@ i {
     transition: .4s ease-in-out;
     &--active {
         width: 30%;
+        @include iphone6plus {
+            width: 50%;
+        }
+        @include iphone6 {
+            width: 55%;
+        }
+        @include phones {
+            width: 61%;
+        }
+        
     }
 }
 
 .circle-nav {
-    display: block;
+    display: none;
     width: 0px;
     height: 50px;
     background-color: darkcyan;
     border-radius: 50%;
     top: 50%;
-    left: -4%;
+    left: -40px;
+    @include tablets {
+        display: block;
+    }
+    @include iphone6plus {
+        display: block;
+        left: -9%;
+    }
+    @include iphone6 {
+        display: block;
+        left: -10%;
+    }
+    @include phones {
+        display: block;
+        left: -11%;
+    }
     transform: translateY(-50%);
     position: fixed;
     transition: .4s ease-in-out;
     &--active {
-        left: 26%;
-
+        left: 25%;
+        @include iphone6plus {
+            left: 41%;
+        }
+        @include iphone6 {
+            left: 45%;
+        }
+        @include phones {
+            left: 51%;
+        }
     }
 }
 
-
+.blog__item-sidebar--active {
+    font-weight: 700;
+    border-right: 2px solid #fff;
+}
 
 .blog__link-mobile {
     color: #fff;
@@ -189,9 +226,25 @@ i {
     text-align: left;
     transform: translateY(-50%);
     width: 225px;
+    z-index: 10;
+    @include iphone6plus {
+        width: 205px;
+        font-size: 12px;
+    }
+    @include iphone6 {
+        width: 202px;
+        font-size: 11px;
+    }
+    @include phones {
+        width: 192px;
+        font-size: 11px;
+    }
 }
 
-
-.blog__nav-mobile {
-
+.fixed {
+    position: fixed;
+    left: 0;
+    top: 6%;
+    width: 30%;
+    transition: .5s;
 }
