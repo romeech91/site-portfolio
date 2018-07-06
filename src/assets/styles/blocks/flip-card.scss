@@ -70,14 +70,14 @@
 }
 
 .link__button {
-    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #fff;
     font-weight: 500;
     border-right: 1px solid;
     width: 100%;
     height: 100%;
-    display: block;
-    text-align: center;
     transition: .3s;
     &:last-child {
         border: none;
@@ -112,6 +112,14 @@
         background-color: #fff;
         border: 1px solid #c4cbcd69;
         height: 100%;
+        width: 300px;
+        border-radius: 0 5px 5px 0;
+        @include iphone6 {
+            width: 240px;
+        }
+        @include phones {
+            width: 230px;
+        }
     }
     &-check {
         display: flex;
@@ -152,8 +160,8 @@
         display: inline-block;
         width: 24px;
         height: 24px;
-        background-color: #fff;
-        border: 1px solid gray;
+        background-color: #08bfa9;
+        border: 1px solid #08bfa9;
         border-radius: 3px;
         &::before {
             background: url(assets/images/checkmark.svg) 50% no-repeat;
@@ -162,14 +170,15 @@
             background-size: cover;
             content: "";
             display: inline-block;
-            height: 18px;
-            left: 2px;
+            height: 13px;
+            left: 4px;
             position: absolute;
-            top: 2px;
-            width: 18px;
+            top: 4px;
+            width: 14px;
         }
     }
 }
+
 
 .form__auth-checkbox_text {
     margin-left: 10px;
@@ -181,7 +190,9 @@
 
 .auth-radio-btns {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    width: 75%;
+    margin: 0 auto;
 }
 
 .auth-radio__question {
