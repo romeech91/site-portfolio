@@ -43,4 +43,5 @@ mixin hero-header(section, name, desc, iconBg, descPos, fontFamily, arrow)
             div(class=`${fontFamily}`).user__name=(`${name}`) 
             .user__info=(`${desc}`)
       div(class=`${arrow}`).down-btn
-        +icon('arrow_down', 'hero__down-btn')
+        a(href='#first-sec').scrollto
+          +icon('arrow_down', 'hero__down-btn')
