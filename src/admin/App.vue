@@ -5,9 +5,7 @@
     .tabs
       tabs
     .content
-      skills(
-        :skills="skills"
-      )
+      skills()
 </template>
 
 <script>
@@ -30,11 +28,6 @@ export default {
     appHeader: header,
     tabs,
     skills
-  },
-  data() {
-    return {
-        skills: data
-    };
   }
 };
 </script>

@@ -8,6 +8,10 @@
                 :key="skill.id"
                 :skill="skill"
             )
+            skills-item(
+                :editmode="true"
+                :typeId="type.id"
+            )
         BR
         HR
         BR

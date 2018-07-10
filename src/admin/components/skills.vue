@@ -12,7 +12,7 @@
 
 <script>
 import skillsRow from "./skillsRow";
-
+import { mapActions } from "vuex";
 export default {
   components: {
     skillsRow
@@ -31,6 +31,12 @@ export default {
         {id: 2, name: "Workflow"}
       ] 
     };
+  },
+  created() {
+    this.fetchSkills();
+  },
+  methods: {
+    ...mapActions(['fetchSkills'])
   }
 };
 </script>
