@@ -2,7 +2,7 @@
     tr(v-if="editmode === false")
         td {{skill.title}}
         td 
-            span {{skill.percent}} %
+            span {{skill.percents}} %
         td
             button() удалить
     tr(v-else)
@@ -44,7 +44,10 @@ export default {
     methods: {
         ...mapActions(["addNewSkill"]),
         addSkill() {
-            this.addNewSkill(this.newSkill);
+            this.addNewSkill(this.newSkill).then(r => {
+                this.newSkill.title = "";
+                this.newSkill.percents = "";
+            });
         }
     }
 }

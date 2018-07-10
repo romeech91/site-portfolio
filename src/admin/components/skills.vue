@@ -1,27 +1,21 @@
 <template lang="pug">
   #about
+    button(@click="refresh") Обновить токен
     h1 Страница обо мне
     skills-row(
       v-for="type in types"
       :key="type.name",
       :type="type"
       :skills="skills"
-
     )
 </template>
 
 <script>
 import skillsRow from "./skillsRow";
-import { mapActions } from "vuex";
+import { mapActions, mapState } from "vuex";
 export default {
   components: {
     skillsRow
-  },
-  props: {
-    skills: {
-      type: Array,
-      default: () => []
-    }
   },
   data() {
     return {
@@ -32,11 +26,19 @@ export default {
       ] 
     };
   },
+  computed: {
+    ...mapState({
+      skills: state => state.skills.data
+    })
+  },
   created() {
     this.fetchSkills();
   },
   methods: {
-    ...mapActions(['fetchSkills'])
+    ...mapActions(["fetchSkills", "refreshToken"]),
+    refresh() {
+      this.refreshToken();
+    }
   }
 };
 </script>
