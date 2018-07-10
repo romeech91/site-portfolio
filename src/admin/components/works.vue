@@ -3,7 +3,7 @@
         input(type="text" placeholder="title" v-model="work.title")
         input(type="text" placeholder="techs" v-model="work.techs")
         input(type="text" placeholder="link" v-model="work.link")
-        input(type="file")
+        input(type="file" @change="addPhoto")
         button(@click="addWork") Добавить
 </template>
 
@@ -25,7 +25,18 @@ export default {
     },
     methods: {
         ...mapActions(["addNewWork"]),
-        addWork() {
+        addPhoto(e) {
+            const files = e.target.files;
+            if (files.lenght === 0) return;
+
+            this.work.photo =files[0];
+        },
+        addWork(e) {
+            const formData = new FormData();
+
+            Object.keys(this.work).forEach(prop => {
+                formData.append(prop, this.work[prop]);
+            });
             this.addNewWork();
         }
     }
