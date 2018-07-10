@@ -47,17 +47,25 @@ block content
           a(href="about.html").link__button Обо мне
           a(href="blog.html").link__button Блог
       
-      .hero__bg-block_auth
+      .hero__bg-block_auth#auth-component
         .block-subtitle.title-auth Авторизуйтесь
-        .form__auth#auth-component
+        .form__auth
           label.form__auth-login
             .form__auth-input_pic
               +icon('login', 'form__auth-icon')
-            input.form__auth-input(type="text", placeholder='Логин') 
+            input.form__auth-input(
+              type="text",
+              placeholder='Логин',
+              v-model="user.name"
+              ) 
           label.form__auth-pass
             .form__auth-input_pic
               +icon('password', 'form__auth-icon')
-            input.form__auth-input(type="password", placeholder='Пароль')
+            input.form__auth-input(
+              type="password",
+              placeholder='Пароль',
+              v-model="user.password"
+              )
           label.form__auth-check
             input.form__auth-checkbox(type="checkbox", name="human")
             .form__auth-checkbox--style
@@ -74,8 +82,10 @@ block content
                 .auth-radio__input--style 
                 p Не уверен
         .link__buttons
-          a(href="").link__button.link__button-back На главную
-          a(href="#").link__button Войти
+          button.link__button.link__button-back На главную
+          button(
+            @click="login"
+            ).link__button Войти
         
         
       .copyright-welcome
